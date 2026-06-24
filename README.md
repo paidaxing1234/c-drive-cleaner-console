@@ -21,6 +21,30 @@
 
 ## 使用方式
 
+一键入口：先分析，再 dry-run，最后要求输入 `YES` 才执行真实清理。
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\run-cdrive-cleaner.ps1
+```
+
+运行后会出现三种结果：
+
+- 看到 `Dry-run finished. No files have been deleted yet.` 表示还没删除。
+- 输入 `YES` 才会执行真实清理。
+- 输入其他内容或直接关闭窗口，都会取消清理。
+
+如果想连浏览器缓存和 pip 缓存一起纳入预演/清理：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\run-cdrive-cleaner.ps1 -IncludeBrowserCache -IncludePipCache
+```
+
+如果想做更慢但更完整的大文件扫描：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\analyze-cdrive.ps1 -FullScan
+```
+
 先分析：
 
 ```powershell
