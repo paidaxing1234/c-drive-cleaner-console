@@ -1,0 +1,628 @@
+{
+    "generatedAt":  "2026-06-24 14:55:05 +08:00",
+    "computerName":  "Windows-PC",
+    "userName":  "User",
+    "drive":  {
+                  "id":  "C:",
+                  "sizeBytes":  428115501056,
+                  "freeBytes":  47805538304,
+                  "usedBytes":  380309962752,
+                  "size":  "398.71 GB",
+                  "free":  "44.52 GB",
+                  "used":  "354.19 GB",
+                  "freePercent":  11.17
+              },
+    "topLevel":  [
+                     {
+                         "path":  "C:\\Users",
+                         "exists":  true,
+                         "bytes":  235243150841,
+                         "size":  "219.09 GB",
+                         "files":  1169827,
+                         "errors":  2
+                     },
+                     {
+                         "path":  "C:\\Windows",
+                         "exists":  true,
+                         "bytes":  43729731204,
+                         "size":  "40.73 GB",
+                         "files":  195724,
+                         "errors":  49
+                     },
+                     {
+                         "path":  "C:\\Program Files",
+                         "exists":  true,
+                         "bytes":  34926686671,
+                         "size":  "32.53 GB",
+                         "files":  79423,
+                         "errors":  3
+                     },
+                     {
+                         "path":  "C:\\hiberfil.sys",
+                         "exists":  true,
+                         "bytes":  34294378496,
+                         "size":  "31.94 GB",
+                         "files":  1,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\Program Files (x86)",
+                         "exists":  true,
+                         "bytes":  24189526417,
+                         "size":  "22.53 GB",
+                         "files":  98023,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\ProgramData",
+                         "exists":  true,
+                         "bytes":  8094448503,
+                         "size":  "7.54 GB",
+                         "files":  9266,
+                         "errors":  340
+                     },
+                     {
+                         "path":  "C:\\$HardLinkBackup",
+                         "exists":  true,
+                         "bytes":  6117425000,
+                         "size":  "5.70 GB",
+                         "files":  8831,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\pagefile.sys",
+                         "exists":  true,
+                         "bytes":  5368709120,
+                         "size":  "5.00 GB",
+                         "files":  1,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\Aomei",
+                         "exists":  true,
+                         "bytes":  762692158,
+                         "size":  "727.36 MB",
+                         "files":  2,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\$Recycle.Bin",
+                         "exists":  true,
+                         "bytes":  24639329,
+                         "size":  "23.50 MB",
+                         "files":  47,
+                         "errors":  1
+                     },
+                     {
+                         "path":  "C:\\swapfile.sys",
+                         "exists":  true,
+                         "bytes":  16777216,
+                         "size":  "16.00 MB",
+                         "files":  1,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\c",
+                         "exists":  true,
+                         "bytes":  3735226,
+                         "size":  "3.56 MB",
+                         "files":  8,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\$SysReset",
+                         "exists":  true,
+                         "bytes":  2529653,
+                         "size":  "2.41 MB",
+                         "files":  9,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\MSI",
+                         "exists":  true,
+                         "bytes":  1225106,
+                         "size":  "1.17 MB",
+                         "files":  32,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\$Windows.~WS",
+                         "exists":  true,
+                         "bytes":  174197,
+                         "size":  "170.11 KB",
+                         "files":  5,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\appverifUI.dll",
+                         "exists":  true,
+                         "bytes":  112472,
+                         "size":  "109.84 KB",
+                         "files":  1,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\vfcompat.dll",
+                         "exists":  true,
+                         "bytes":  68104,
+                         "size":  "66.51 KB",
+                         "files":  1,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\DumpStack.log.tmp",
+                         "exists":  true,
+                         "bytes":  12288,
+                         "size":  "12.00 KB",
+                         "files":  1,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\DumpStack.log",
+                         "exists":  true,
+                         "bytes":  12288,
+                         "size":  "12.00 KB",
+                         "files":  1,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\AMTAG.BIN",
+                         "exists":  true,
+                         "bytes":  1024,
+                         "size":  "1.00 KB",
+                         "files":  1,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\GenKey.Edx",
+                         "exists":  true,
+                         "bytes":  593,
+                         "size":  "593 B",
+                         "files":  1,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\Genesis.Edx",
+                         "exists":  true,
+                         "bytes":  500,
+                         "size":  "500 B",
+                         "files":  1,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\ComputerID.txt",
+                         "exists":  true,
+                         "bytes":  27,
+                         "size":  "27 B",
+                         "files":  1,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\common_attachment",
+                         "exists":  true,
+                         "bytes":  16,
+                         "size":  "16 B",
+                         "files":  1,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\inetpub",
+                         "exists":  true,
+                         "bytes":  0,
+                         "size":  "0 B",
+                         "files":  0,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\iquant_data",
+                         "exists":  true,
+                         "bytes":  0,
+                         "size":  "0 B",
+                         "files":  0,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\ESD",
+                         "exists":  true,
+                         "bytes":  0,
+                         "size":  "0 B",
+                         "files":  0,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\System Volume Information",
+                         "exists":  true,
+                         "bytes":  0,
+                         "size":  "0 B",
+                         "files":  0,
+                         "errors":  1
+                     },
+                     {
+                         "path":  "C:\\drmsoft",
+                         "exists":  true,
+                         "bytes":  0,
+                         "size":  "0 B",
+                         "files":  1,
+                         "errors":  0
+                     },
+                     {
+                         "path":  "C:\\OneDriveTemp",
+                         "exists":  true,
+                         "bytes":  0,
+                         "size":  "0 B",
+                         "files":  0,
+                         "errors":  0
+                     }
+                 ],
+    "cleanupCandidates":  [
+                              {
+                                  "name":  "User temp",
+                                  "path":  "C:\\Users\\User\\AppData\\Local\\Temp",
+                                  "risk":  "low",
+                                  "action":  "Safe to clean files older than 24 hours",
+                                  "exists":  true,
+                                  "bytes":  23718485445,
+                                  "size":  "22.09 GB",
+                                  "files":  37278,
+                                  "errors":  1
+                              },
+                              {
+                                  "name":  "pip cache",
+                                  "path":  "C:\\Users\\User\\AppData\\Local\\pip\\Cache",
+                                  "risk":  "low",
+                                  "action":  "Can be cleaned with pip cache purge",
+                                  "exists":  true,
+                                  "bytes":  7136181270,
+                                  "size":  "6.65 GB",
+                                  "files":  3365,
+                                  "errors":  0
+                              },
+                              {
+                                  "name":  "Generic .cache",
+                                  "path":  "C:\\Users\\User\\.cache",
+                                  "risk":  "medium",
+                                  "action":  "Mostly developer/model cache; review before deletion",
+                                  "exists":  true,
+                                  "bytes":  3833871921,
+                                  "size":  "3.57 GB",
+                                  "files":  30549,
+                                  "errors":  0
+                              },
+                              {
+                                  "name":  "NuGet package cache",
+                                  "path":  "C:\\Users\\User\\.nuget\\packages",
+                                  "risk":  "medium",
+                                  "action":  "Will slow first restore for .NET projects",
+                                  "exists":  true,
+                                  "bytes":  3444395609,
+                                  "size":  "3.21 GB",
+                                  "files":  19559,
+                                  "errors":  0
+                              },
+                              {
+                                  "name":  "Chrome cache",
+                                  "path":  "C:\\Users\\User\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cache",
+                                  "risk":  "low",
+                                  "action":  "Close Chrome before cleaning",
+                                  "exists":  true,
+                                  "bytes":  497979062,
+                                  "size":  "474.91 MB",
+                                  "files":  1666,
+                                  "errors":  0
+                              },
+                              {
+                                  "name":  "Explorer thumbnail cache",
+                                  "path":  "C:\\Users\\User\\AppData\\Local\\Microsoft\\Windows\\Explorer",
+                                  "risk":  "low",
+                                  "action":  "Windows will rebuild thumbnails",
+                                  "exists":  true,
+                                  "bytes":  43139610,
+                                  "size":  "41.14 MB",
+                                  "files":  32,
+                                  "errors":  0
+                              },
+                              {
+                                  "name":  "Recycle Bin",
+                                  "path":  "C:\\$Recycle.Bin",
+                                  "risk":  "low",
+                                  "action":  "Clear only after confirming no restore is needed",
+                                  "exists":  true,
+                                  "bytes":  24639329,
+                                  "size":  "23.50 MB",
+                                  "files":  47,
+                                  "errors":  1
+                              },
+                              {
+                                  "name":  "Windows update download cache",
+                                  "path":  "C:\\WINDOWS\\SoftwareDistribution\\Download",
+                                  "risk":  "medium",
+                                  "action":  "Clean only after Windows Update is idle",
+                                  "exists":  true,
+                                  "bytes":  2443856,
+                                  "size":  "2.33 MB",
+                                  "files":  6,
+                                  "errors":  0
+                              },
+                              {
+                                  "name":  "Downloads",
+                                  "path":  "C:\\Users\\User\\Downloads",
+                                  "risk":  "manual",
+                                  "action":  "User files; never auto-delete",
+                                  "exists":  true,
+                                  "bytes":  0,
+                                  "size":  "0 B",
+                                  "files":  0,
+                                  "errors":  0
+                              },
+                              {
+                                  "name":  "Edge cache",
+                                  "path":  "C:\\Users\\User\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Cache",
+                                  "risk":  "low",
+                                  "action":  "Close Edge before cleaning",
+                                  "exists":  false,
+                                  "bytes":  0,
+                                  "size":  "0 B",
+                                  "files":  0,
+                                  "errors":  0
+                              },
+                              {
+                                  "name":  "Windows temp",
+                                  "path":  "C:\\WINDOWS\\Temp",
+                                  "risk":  "low",
+                                  "action":  "Safe to clean files older than 24 hours",
+                                  "exists":  true,
+                                  "bytes":  0,
+                                  "size":  "0 B",
+                                  "files":  0,
+                                  "errors":  1
+                              }
+                          ],
+    "largeFiles":  [
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\wsl\\{3883ed8b-5987-4cd5-920f-f22447c2ad1c}\\ext4.vhdx",
+                           "bytes":  35020341248,
+                           "size":  "32.62 GB",
+                           "lastWriteTime":  "2026-06-10 00:11:50"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\Videos\\NVIDIA\\Desktop\\Desktop 2026.02.26 - 18.35.19.01.mp4",
+                           "bytes":  6542824953,
+                           "size":  "6.09 GB",
+                           "lastWriteTime":  "2026-02-26 19:49:32"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\Google\\Chrome\\User Data\\OptGuideOnDeviceModel\\2025.8.8.1141\\weights.bin",
+                           "bytes":  4269932544,
+                           "size":  "3.98 GB",
+                           "lastWriteTime":  "1980-01-01 08:00:00"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\pip\\cache\\http\\0\\a\\d\\7\\4\\0ad745ec4a57b483435a7891a0eeac0eb7a4a629a1010c076ef6e927",
+                           "bytes":  2454825648,
+                           "size":  "2.29 GB",
+                           "lastWriteTime":  "2026-06-10 14:48:26"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\uv\\cache\\archive-v0\\KCMAhJle57usjxeo\\torch\\lib\\dnnl.lib",
+                           "bytes":  2325850314,
+                           "size":  "2.17 GB",
+                           "lastWriteTime":  "2026-06-17 11:52:10"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\.cache\\whisper\\medium.pt",
+                           "bytes":  1528008539,
+                           "size":  "1.42 GB",
+                           "lastWriteTime":  "2026-06-18 01:08:11"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Roaming\\Tencent\\Marvis\\User\\oAN1i2bEA8KL11AseAjgX1yxcr18\\database\\data.db",
+                           "bytes":  1037807616,
+                           "size":  "989.73 MB",
+                           "lastWriteTime":  "2026-06-24 12:20:45"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\uv\\cache\\archive-v0\\KCMAhJle57usjxeo\\torch\\lib\\torch_cuda.dll",
+                           "bytes":  1028844544,
+                           "size":  "981.18 MB",
+                           "lastWriteTime":  "2026-06-17 11:58:35"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\DouyinAR\\Shared\\Cache\\versionPackageCache\\Updater.exe",
+                           "bytes":  1008573256,
+                           "size":  "961.85 MB",
+                           "lastWriteTime":  "2026-06-17 16:26:57"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\JianyingPro\\User Data\\Cache\\bytebench\\lv_win_2_h264_hard_encode.yuv",
+                           "bytes":  933120000,
+                           "size":  "889.89 MB",
+                           "lastWriteTime":  "2025-07-19 14:36:16"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\.codex\\sessions\\2026\\06\\13\\rollout-2026-06-13T20-02-09-019ec0dc-627f-71f1-833e-d742974d66e5.jsonl",
+                           "bytes":  872555516,
+                           "size":  "832.13 MB",
+                           "lastWriteTime":  "2026-06-22 22:28:43"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\Documents\\Codex\\2026-06-22\\new-chat\\outputs\\phase4-ep01-real-broll-v01.mp4",
+                           "bytes":  766642634,
+                           "size":  "731.13 MB",
+                           "lastWriteTime":  "2026-06-22 02:38:52"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\uv\\cache\\archive-v0\\KCMAhJle57usjxeo\\torch\\lib\\cublasLt64_12.dll",
+                           "bytes":  674667520,
+                           "size":  "643.41 MB",
+                           "lastWriteTime":  "2026-06-17 11:39:04"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\.codex-session-delete\\codex-plus.log",
+                           "bytes":  627689588,
+                           "size":  "598.61 MB",
+                           "lastWriteTime":  "2026-06-24 14:56:49"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\Documents\\Codex\\2026-06-22\\new-chat\\outputs\\phase4-ep01-real-v03-nomask-edge-v01.mp4",
+                           "bytes":  598404263,
+                           "size":  "570.68 MB",
+                           "lastWriteTime":  "2026-06-22 03:42:38"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\Videos\\SnapDownloader\\tmp\\tmpv_6372241752915600.webm",
+                           "bytes":  596123551,
+                           "size":  "568.51 MB",
+                           "lastWriteTime":  "2025-07-19 17:14:18"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\Documents\\Codex\\2026-06-22\\new-chat\\outputs\\phase4-ep01-real-broll-indextts2-final.mp4",
+                           "bytes":  595794874,
+                           "size":  "568.19 MB",
+                           "lastWriteTime":  "2026-06-22 15:45:38"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\Documents\\Codex\\2026-06-22\\new-chat\\outputs\\phase4-ep01-real-v05-layout-edge-preview.mp4",
+                           "bytes":  594081857,
+                           "size":  "566.56 MB",
+                           "lastWriteTime":  "2026-06-22 05:30:01"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\NRC\\Saved\\ProgramBinaryCache\\D3DGraphics_V4318_D9346_S342495454_R161.ushaderprecache",
+                           "bytes":  552599552,
+                           "size":  "527.00 MB",
+                           "lastWriteTime":  "2026-05-30 19:21:38"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\NVIDIA\\DXCache\\c1f8a9dbb0ed8961.nvph",
+                           "bytes":  536870912,
+                           "size":  "512.00 MB",
+                           "lastWriteTime":  "2026-05-30 19:12:24"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\NVIDIA\\DXCache\\fa36a9dbb0ed8961.nvph",
+                           "bytes":  536870912,
+                           "size":  "512.00 MB",
+                           "lastWriteTime":  "2026-03-30 14:57:42"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\uv\\cache\\archive-v0\\KCMAhJle57usjxeo\\torch\\lib\\cudnn_engines_precompiled64_9.dll",
+                           "bytes":  513926688,
+                           "size":  "490.12 MB",
+                           "lastWriteTime":  "2026-06-17 11:43:17"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\@genieworkbuddy-desktop-updater\\installer.exe",
+                           "bytes":  509458448,
+                           "size":  "485.86 MB",
+                           "lastWriteTime":  "2026-06-24 00:27:03"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\Videos\\lolhighlight\\be764a0d-98ef-587f-aab8-6f5e99c46f24\\400709975077\\0a34ec3cf02da3ba42d0e706f2c2cdb6.mp4",
+                           "bytes":  472919465,
+                           "size":  "451.01 MB",
+                           "lastWriteTime":  "2025-11-16 14:32:58"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\Documents\\Codex\\2026-06-22\\new-chat\\outputs\\phase4-ep01-realbeat-tight-white-v06.mp4",
+                           "bytes":  444409819,
+                           "size":  "423.82 MB",
+                           "lastWriteTime":  "2026-06-22 20:41:16"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\Microsoft\\vscode-cpptools\\bd77b68579b3662cb19e8c291e515e7f\\.BROWSE.VC.DB",
+                           "bytes":  431497216,
+                           "size":  "411.51 MB",
+                           "lastWriteTime":  "2025-11-23 21:23:56"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\Temp\\react-motion-renderI1BqAX\\pre-encode.mp4",
+                           "bytes":  428867632,
+                           "size":  "409.00 MB",
+                           "lastWriteTime":  "2026-06-22 21:54:04"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\.cache\\huggingface\\hub\\models--bert-base-chinese\\snapshots\\8f23c25b06e129b6c986331a13d8d025a92cf0ea\\model.safetensors",
+                           "bytes":  411553788,
+                           "size":  "392.49 MB",
+                           "lastWriteTime":  "2025-07-12 15:54:55"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\uv\\cache\\archive-v0\\KCMAhJle57usjxeo\\torch\\lib\\cusparse64_12.dll",
+                           "bytes":  379535872,
+                           "size":  "361.95 MB",
+                           "lastWriteTime":  "2026-06-17 11:49:31"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\pip\\cache\\http\\c\\4\\7\\4\\3\\c47436be9ea54b5ef258de2fdec928730220a0eb303ac333237a3439",
+                           "bytes":  375911415,
+                           "size":  "358.50 MB",
+                           "lastWriteTime":  "2025-06-28 14:20:01"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\Videos\\SnapDownloader\\tmp\\tmpv_1205111752915600.webm",
+                           "bytes":  373288258,
+                           "size":  "356.00 MB",
+                           "lastWriteTime":  "2025-07-19 17:22:04"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\Videos\\SnapDownloader\\tmp\\tmpv_9273981752915600.webm",
+                           "bytes":  368150858,
+                           "size":  "351.10 MB",
+                           "lastWriteTime":  "2025-07-19 17:13:30"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\.codex\\sessions\\2026\\06\\22\\rollout-2026-06-22T02-13-11-019eeb62-f2e7-7122-9e03-bb48d0bf416b.jsonl",
+                           "bytes":  365177583,
+                           "size":  "348.26 MB",
+                           "lastWriteTime":  "2026-06-24 14:56:27"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Roaming\\LarkShell\\update\\update_downloading\\667b4f31b5c242a06eaeba1c5afde1ef-1f4eab35d8f50c1d2798c6b5b9a2dab7-1th.exe",
+                           "bytes":  334347608,
+                           "size":  "318.86 MB",
+                           "lastWriteTime":  "2025-07-03 11:05:04"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\ynote-desktop-updater\\installer.exe",
+                           "bytes":  333126288,
+                           "size":  "317.69 MB",
+                           "lastWriteTime":  "2026-06-09 01:14:59"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\AppData\\Local\\ynote-desktop-updater\\pending\\有道云笔记-8.2.63.exe",
+                           "bytes":  333126288,
+                           "size":  "317.69 MB",
+                           "lastWriteTime":  "2026-06-09 01:14:59"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\Videos\\SnapDownloader\\tmp\\tmpv_5055271752915600.webm",
+                           "bytes":  330216831,
+                           "size":  "314.92 MB",
+                           "lastWriteTime":  "2025-07-19 17:18:18"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\Documents\\Codex\\2026-06-21\\use-imagegen-to-make-or-edit\\outputs\\phase4-ep01-full-v01.mp4",
+                           "bytes":  324434334,
+                           "size":  "309.40 MB",
+                           "lastWriteTime":  "2026-06-21 23:40:16"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\.vscode\\extensions\\openai.chatgpt-26.616.71553-win32-x64\\bin\\windows-x86_64\\codex.exe",
+                           "bytes":  323306800,
+                           "size":  "308.33 MB",
+                           "lastWriteTime":  "2026-06-23 15:46:49"
+                       },
+                       {
+                           "path":  "C:\\Users\\User\\.codex\\.sandbox-bin\\codex.exe",
+                           "bytes":  318210352,
+                           "size":  "303.47 MB",
+                           "lastWriteTime":  "2026-06-22 15:07:09"
+                       }
+                   ],
+    "recommendations":  [
+                            "Start with user temp, browser cache, thumbnail cache, and pip cache.",
+                            "C:\\Users is the largest area, but it contains real user files and development data.",
+                            "hiberfil.sys can be removed only by disabling hibernation, which changes Windows behavior.",
+                            "WSL ext4.vhdx, videos, model weights, and developer caches need manual review."
+                        ]
+}
