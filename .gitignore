@@ -1,0 +1,6 @@
+reports/*.log
+reports/*.local.json
+reports/*.private.json
+*.tmp
+.DS_Store
+Thumbs.db
