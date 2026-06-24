@@ -1,6 +1,7 @@
 param(
   [string]$Drive = "C:",
   [string]$OutputPath = ".\reports\cdrive-report.local.json",
+  [switch]$FullScan,
   [switch]$SkipLargeFiles
 )
 
@@ -107,6 +108,65 @@ function Get-LargeFiles([string]$Root, [int]$Limit = 40) {
     }
 }
 
+function Get-FastTopLevelUsage([string]$Drive) {
+  $paths = @(
+    "$Drive\Users",
+    "$Drive\Windows",
+    "$Drive\Program Files",
+    "$Drive\Program Files (x86)",
+    "$Drive\ProgramData",
+    "$Drive\hiberfil.sys",
+    "$Drive\pagefile.sys",
+    "$Drive\`$Recycle.Bin"
+  )
+
+  foreach ($path in $paths) {
+    if (-not (Test-Path -LiteralPath $path)) {
+      continue
+    }
+
+    $item = Get-Item -LiteralPath $path -Force -ErrorAction SilentlyContinue
+    if (-not $item) {
+      continue
+    }
+
+    if ($item.PSIsContainer) {
+      $match = $script:candidateUsage | Where-Object { $_.path -eq $path } | Select-Object -First 1
+      if ($match) {
+        [pscustomobject]@{
+          path = $path
+          exists = $true
+          bytes = $match.bytes
+          size = $match.size
+          files = $match.files
+          errors = $match.errors
+          estimated = $false
+        }
+      } else {
+        [pscustomobject]@{
+          path = $path
+          exists = $true
+          bytes = 0
+          size = "not measured"
+          files = 0
+          errors = 0
+          estimated = $true
+        }
+      }
+    } else {
+      [pscustomobject]@{
+        path = $item.FullName
+        exists = $true
+        bytes = $item.Length
+        size = ConvertTo-SizeLabel $item.Length
+        files = 1
+        errors = 0
+        estimated = $false
+      }
+    }
+  }
+}
+
 $driveInfo = Get-CimInstance Win32_LogicalDisk -Filter "DeviceID='$Drive'"
 $userProfile = $env:USERPROFILE
 
@@ -195,10 +255,23 @@ $candidateUsage = foreach ($candidate in $cleanupCandidates) {
 }
 
 $root = "$Drive\"
+$topLevelUsage = if ($FullScan) {
+  @(Get-TopLevelUsage $root | Sort-Object bytes -Descending | Select-Object -First 30)
+} else {
+  @(Get-FastTopLevelUsage $Drive | Sort-Object bytes -Descending)
+}
+
+$largeFileUsage = if ($FullScan -and -not $SkipLargeFiles) {
+  @(Get-LargeFiles "$Drive\Users" 40)
+} else {
+  @()
+}
+
 $report = [pscustomobject]@{
   generatedAt = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss zzz")
   computerName = $env:COMPUTERNAME
   userName = $env:USERNAME
+  scanMode = $(if ($FullScan) { "full" } else { "quick" })
   drive = [pscustomobject]@{
     id = $driveInfo.DeviceID
     sizeBytes = [int64]$driveInfo.Size
@@ -209,9 +282,9 @@ $report = [pscustomobject]@{
     used = ConvertTo-SizeLabel ($driveInfo.Size - $driveInfo.FreeSpace)
     freePercent = [math]::Round(100 * $driveInfo.FreeSpace / $driveInfo.Size, 2)
   }
-  topLevel = @(Get-TopLevelUsage $root | Sort-Object bytes -Descending | Select-Object -First 30)
+  topLevel = $topLevelUsage
   cleanupCandidates = @($candidateUsage | Sort-Object bytes -Descending)
-  largeFiles = $(if ($SkipLargeFiles) { @() } else { @(Get-LargeFiles "$Drive\Users" 40) })
+  largeFiles = $largeFileUsage
   recommendations = @(
     "Start with user temp, browser cache, thumbnail cache, and pip cache.",
     "C:\Users is the largest area, but it contains real user files and development data.",
