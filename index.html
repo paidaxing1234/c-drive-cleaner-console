@@ -40,10 +40,19 @@
 
       <section class="command-panel" aria-labelledby="quick-start-title">
         <div>
-          <h2 id="quick-start-title">本地一键命令</h2>
-          <p>先运行分析，再执行 dry-run。确认日志没问题后，才加 <code>-Execute</code> 真正删除低风险缓存。</p>
+          <h2 id="quick-start-title">本地一键控制</h2>
+          <p id="localStatus">网页按钮需要先启动本地服务：双击 <code>start-local-console.cmd</code>，再打开 <code>http://127.0.0.1:4173/</code>。</p>
         </div>
         <div class="command-grid">
+          <button class="copy-button primary local-action" data-local-action="analyze" disabled>
+            <span>点击分析</span>
+          </button>
+          <button class="copy-button local-action" data-local-action="dry-run" disabled>
+            <span>点击预演</span>
+          </button>
+          <button class="copy-button danger local-action" data-local-action="execute" disabled>
+            <span>确认后清理</span>
+          </button>
           <button class="copy-button primary" data-copy="powershell -ExecutionPolicy Bypass -File .\scripts\run-cdrive-cleaner.ps1">
             <span>复制一键入口</span>
           </button>
@@ -57,6 +66,20 @@
             <span>直接执行清理</span>
           </button>
         </div>
+      </section>
+
+      <section class="panel local-console" aria-labelledby="local-console-title">
+        <div class="section-heading">
+          <h2 id="local-console-title">执行日志</h2>
+          <span id="localTaskStatus">等待本地服务</span>
+        </div>
+        <div class="option-row">
+          <label><input id="includeBrowserCache" type="checkbox" checked /> 浏览器缓存</label>
+          <label><input id="includePipCache" type="checkbox" checked /> pip 缓存</label>
+          <label><input id="includeRecycleBin" type="checkbox" /> 回收站</label>
+          <label>文件至少旧于 <input id="olderThanHours" type="number" min="1" max="720" value="24" /> 小时</label>
+        </div>
+        <pre id="localLog">本地服务未连接。GitHub Pages 只能展示网页，不能直接操作你的电脑。</pre>
       </section>
 
       <section class="layout">
