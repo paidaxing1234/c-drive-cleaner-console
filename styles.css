@@ -232,6 +232,12 @@ dd {
   border-color: var(--accent);
 }
 
+.copy-button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
 .copy-button.danger {
   background: var(--danger-bg);
   border-color: #ffc7b8;
