@@ -92,6 +92,115 @@ function showToast(message) {
   setTimeout(() => toast.classList.remove("show"), 1800);
 }
 
+function getCleanupOptions() {
+  const olderThanHours = document.getElementById("olderThanHours");
+  return {
+    includeBrowserCache: document.getElementById("includeBrowserCache")?.checked ?? true,
+    includePipCache: document.getElementById("includePipCache")?.checked ?? true,
+    includeRecycleBin: document.getElementById("includeRecycleBin")?.checked ?? false,
+    olderThanHours: Number(olderThanHours?.value || 24),
+  };
+}
+
+function setLocalLog(message) {
+  const log = document.getElementById("localLog");
+  if (log) log.textContent = message;
+}
+
+function appendLocalLog(message) {
+  const log = document.getElementById("localLog");
+  if (!log) return;
+  log.textContent = `${log.textContent}\n${message}`.trim();
+  log.scrollTop = log.scrollHeight;
+}
+
+function setLocalBusy(isBusy) {
+  document.querySelectorAll("[data-local-action]").forEach((button) => {
+    button.disabled = isBusy || button.dataset.localReady !== "true";
+  });
+}
+
+async function callLocalApi(route, body = {}) {
+  const response = await fetch(route, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  const payload = await response.json();
+  if (!response.ok) {
+    throw new Error(payload.error || payload.stderr || `请求失败：${response.status}`);
+  }
+  return payload;
+}
+
+async function runLocalAction(action) {
+  const status = document.getElementById("localTaskStatus");
+  const options = getCleanupOptions();
+  let route = "/api/analyze";
+  let body = {};
+
+  if (action === "dry-run") {
+    route = "/api/dry-run";
+    body = options;
+  }
+
+  if (action === "execute") {
+    const confirmText = window.prompt("输入 YES 才会真实清理低风险缓存。");
+    if (confirmText !== "YES") {
+      showToast("已取消清理");
+      return;
+    }
+    route = "/api/execute";
+    body = { ...options, confirm: "YES" };
+  }
+
+  setLocalBusy(true);
+  if (status) status.textContent = "正在执行";
+  setLocalLog(`开始：${action}`);
+
+  try {
+    const result = await callLocalApi(route, body);
+    appendLocalLog(result.stdout || "完成。");
+    if (result.stderr) appendLocalLog(`\n错误输出：\n${result.stderr}`);
+    if (result.report) renderReport(result.report);
+    showToast("执行完成");
+  } catch (error) {
+    appendLocalLog(`失败：${error.message}`);
+    showToast("执行失败");
+  } finally {
+    if (status) status.textContent = "本地服务已连接";
+    setLocalBusy(false);
+  }
+}
+
+async function detectLocalServer() {
+  const status = document.getElementById("localStatus");
+  const taskStatus = document.getElementById("localTaskStatus");
+  const buttons = document.querySelectorAll("[data-local-action]");
+
+  try {
+    const response = await fetch("/api/status", { cache: "no-store" });
+    if (!response.ok) throw new Error("not local");
+    const data = await response.json();
+    if (!data.local) throw new Error("not local");
+
+    if (status) status.textContent = "本地服务已连接，可以直接点击按钮分析、预演或清理。";
+    if (taskStatus) taskStatus.textContent = data.activeTask ? `正在执行：${data.activeTask}` : "本地服务已连接";
+    buttons.forEach((button) => {
+      button.dataset.localReady = "true";
+      button.disabled = Boolean(data.activeTask);
+    });
+    setLocalLog("本地服务已连接。建议先点“点击分析”，再点“点击预演”，最后确认后清理。");
+  } catch {
+    if (status) status.innerHTML = "网页按钮需要先启动本地服务：双击 <code>start-local-console.cmd</code>，再打开 <code>http://127.0.0.1:4173/</code>。";
+    if (taskStatus) taskStatus.textContent = "等待本地服务";
+    buttons.forEach((button) => {
+      button.dataset.localReady = "false";
+      button.disabled = true;
+    });
+  }
+}
+
 document.querySelectorAll("[data-copy]").forEach((button) => {
   button.addEventListener("click", async () => {
     const command = button.getAttribute("data-copy");
@@ -104,6 +213,10 @@ document.querySelectorAll("[data-copy]").forEach((button) => {
   });
 });
 
+document.querySelectorAll("[data-local-action]").forEach((button) => {
+  button.addEventListener("click", () => runLocalAction(button.dataset.localAction));
+});
+
 fetch("./reports/cdrive-report.json")
   .then((response) => {
     if (!response.ok) throw new Error("report not found");
@@ -111,3 +224,5 @@ fetch("./reports/cdrive-report.json")
   })
   .then(renderReport)
   .catch(() => renderReport(fallbackReport));
+
+detectLocalServer();
