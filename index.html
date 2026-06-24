@@ -44,14 +44,17 @@
           <p>先运行分析，再执行 dry-run。确认日志没问题后，才加 <code>-Execute</code> 真正删除低风险缓存。</p>
         </div>
         <div class="command-grid">
+          <button class="copy-button primary" data-copy="powershell -ExecutionPolicy Bypass -File .\scripts\run-cdrive-cleaner.ps1">
+            <span>复制一键入口</span>
+          </button>
           <button class="copy-button" data-copy="powershell -ExecutionPolicy Bypass -File .\scripts\analyze-cdrive.ps1">
-            <span>复制分析命令</span>
+            <span>只分析</span>
           </button>
           <button class="copy-button" data-copy="powershell -ExecutionPolicy Bypass -File .\scripts\clean-cdrive.ps1 -IncludeBrowserCache -IncludePipCache">
-            <span>复制 dry-run 命令</span>
+            <span>只预演</span>
           </button>
           <button class="copy-button danger" data-copy="powershell -ExecutionPolicy Bypass -File .\scripts\clean-cdrive.ps1 -Execute -IncludeBrowserCache -IncludePipCache">
-            <span>复制真实清理命令</span>
+            <span>直接执行清理</span>
           </button>
         </div>
       </section>
